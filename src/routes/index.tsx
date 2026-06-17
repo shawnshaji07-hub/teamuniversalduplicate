@@ -6,6 +6,7 @@ import functionalImg from "@/assets/functional.jpg";
 import trainerImg from "@/assets/trainer.jpg";
 import equipmentImg from "@/assets/equipment.jpg";
 import catPhoto from "@/assets/cat-photo.jpeg.asset.json";
+import {
   Phone,
   MapPin,
   Clock,
