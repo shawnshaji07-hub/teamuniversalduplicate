@@ -64,6 +64,7 @@ function Home() {
       <Hero />
       <About />
       <Services />
+      <Gallery />
       <WhyUs />
       <Reviews />
       <Facilities />
@@ -78,6 +79,7 @@ function Nav() {
   const links = [
     ["About", "#about"],
     ["Services", "#services"],
+    ["Gallery", "#gallery"],
     ["Why Us", "#why"],
     ["Reviews", "#reviews"],
     ["Contact", "#contact"],
@@ -325,6 +327,71 @@ function Services() {
           ))}
         </div>
       </div>
+    </section>
+  );
+}
+
+function Gallery() {
+  const [lightbox, setLightbox] = useState<string | null>(null);
+  const photos = [
+    { src: heroImg, alt: "Gym floor and boxing area" },
+    { src: boxingImg, alt: "Boxing training session" },
+    { src: bodybuildingImg, alt: "Bodybuilding and strength training" },
+    { src: functionalImg, alt: "Functional training zone" },
+    { src: trainerImg, alt: "Personal training session" },
+    { src: equipmentImg, alt: "Pro-grade equipment" },
+    { src: catPhoto.url, alt: "Cat photo" },
+  ];
+  return (
+    <section id="gallery" className="py-20 sm:py-28 border-t border-border">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6">
+        <div className="max-w-2xl mb-14">
+          <SectionLabel>Inside the Centre</SectionLabel>
+          <h2 className="font-display text-4xl sm:text-5xl font-bold mt-3 leading-tight">
+            Gym & <span className="text-primary">Boxing</span> Photos
+          </h2>
+        </div>
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
+          {photos.map((p, i) => (
+            <button
+              key={i}
+              onClick={() => setLightbox(p.src)}
+              className="group relative overflow-hidden border border-border bg-card aspect-[4/3] focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background"
+            >
+              <img
+                src={p.src}
+                alt={p.alt}
+                loading="lazy"
+                className="h-full w-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition" />
+              <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition">
+                <span className="text-sm font-semibold uppercase tracking-wider">{p.alt}</span>
+              </div>
+            </button>
+          ))}
+        </div>
+      </div>
+      {lightbox && (
+        <div
+          className="fixed inset-0 z-[60] bg-background/95 backdrop-blur flex items-center justify-center p-4"
+          onClick={() => setLightbox(null)}
+        >
+          <button
+            className="absolute top-4 right-4 p-2 text-foreground hover:text-primary transition"
+            onClick={() => setLightbox(null)}
+            aria-label="Close lightbox"
+          >
+            <X className="h-8 w-8" />
+          </button>
+          <img
+            src={lightbox}
+            alt="Gallery preview"
+            className="max-h-[85vh] max-w-full object-contain"
+            onClick={(e) => e.stopPropagation()}
+          />
+        </div>
+      )}
     </section>
   );
 }
