@@ -77,6 +77,16 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
+      { title: "Team universal fitness and boxing centre" },
+      { property: "og:title", content: "Team universal fitness and boxing centre" },
+      { name: "twitter:title", content: "Team universal fitness and boxing centre" },
+      { name: "description", content: "Universal Strength Hub is a mobile-responsive website for Team Universal Fitness and Boxing Centre." },
+      { property: "og:description", content: "Universal Strength Hub is a mobile-responsive website for Team Universal Fitness and Boxing Centre." },
+      { name: "twitter:description", content: "Universal Strength Hub is a mobile-responsive website for Team Universal Fitness and Boxing Centre." },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/69a78319-3863-4bc0-b587-cad8bec97af6" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/69a78319-3863-4bc0-b587-cad8bec97af6" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:type", content: "website" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
