@@ -5,6 +5,7 @@ import bodybuildingImg from "@/assets/bodybuilding.jpg";
 import functionalImg from "@/assets/functional.jpg";
 import trainerImg from "@/assets/trainer.jpg";
 import equipmentImg from "@/assets/equipment.jpg";
+import catPhoto from "@/assets/cat-photo.jpeg.asset.json";
 import {
   Phone,
   MapPin,
@@ -209,8 +210,8 @@ function About() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
         <div className="relative">
           <img
-            src={equipmentImg}
-            alt="Pro-grade dumbbell rack at Team Universal"
+            src={catPhoto.url}
+            alt="Cat photo"
             width={1280}
             height={1024}
             loading="lazy"
