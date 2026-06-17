@@ -64,6 +64,7 @@ function Home() {
       <Hero />
       <About />
       <Services />
+      <Gallery />
       <WhyUs />
       <Reviews />
       <Facilities />
