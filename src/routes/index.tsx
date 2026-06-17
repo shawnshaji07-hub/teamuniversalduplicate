@@ -79,6 +79,7 @@ function Nav() {
   const links = [
     ["About", "#about"],
     ["Services", "#services"],
+    ["Gallery", "#gallery"],
     ["Why Us", "#why"],
     ["Reviews", "#reviews"],
     ["Contact", "#contact"],
