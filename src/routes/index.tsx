@@ -210,8 +210,8 @@ function About() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
         <div className="relative">
           <img
-            src={equipmentImg}
-            alt="Pro-grade dumbbell rack at Team Universal"
+            src={catPhoto.url}
+            alt="Cat photo"
             width={1280}
             height={1024}
             loading="lazy"
