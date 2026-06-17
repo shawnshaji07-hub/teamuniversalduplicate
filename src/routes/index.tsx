@@ -5,7 +5,7 @@ import bodybuildingImg from "@/assets/bodybuilding.jpg";
 import functionalImg from "@/assets/functional.jpg";
 import trainerImg from "@/assets/trainer.jpg";
 import equipmentImg from "@/assets/equipment.jpg";
-import {
+import catPhoto from "@/assets/cat-photo.jpeg.asset.json";
   Phone,
   MapPin,
   Clock,
